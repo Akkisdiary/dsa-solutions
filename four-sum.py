@@ -1,7 +1,7 @@
 # 18. Four Sum
 # https://leetcode.com/problems/4sum/
 
-from dsa.utils import TestRunner
+from utils import TestRunner
 
 
 class SolutionBrute(object):

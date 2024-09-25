@@ -2,7 +2,7 @@
 # https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array/description
 
 
-from dsa.utils import TestRunner, ListNode
+from utils import TestRunner, ListNode
 
 
 class SolutionBrute:

@@ -2,7 +2,7 @@
 # https://www.codingninjas.com/codestudio/problems/920321?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website
 # https://www.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1
 
-from dsa.utils import TestRunner
+from utils import TestRunner
 
 
 class SolutionBrute:

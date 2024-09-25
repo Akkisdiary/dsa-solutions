@@ -1,7 +1,7 @@
 # 1. Two Sum
 # https://leetcode.com/problems/two-sum/description/
 
-from dsa.utils import TestRunner
+from utils import TestRunner
 
 
 class SolutionBrute:

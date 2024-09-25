@@ -1,4 +1,25 @@
 import time
+from copy import deepcopy
+
+
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+
+def Green(s):
+    return f"{bcolors.OKGREEN}{s}{bcolors.ENDC}"
+
+
+def Red(s):
+    return f"{bcolors.FAIL}{s}{bcolors.ENDC}"
 
 
 class TestRunner:
@@ -16,12 +37,15 @@ class TestRunner:
 
     def test(self, serialize=(lambda x: x)):
         self.s = time.time()
-        self.output = self.run(**self.input)
+        self.output = self.run(**deepcopy(self.input))
         self.e = time.time()
         if serialize(self.output) == serialize(self.expected):
-            print(f"input: {self.input} rt: {self.e-self.s}")
+            print(
+                f"{Green('PASSED')} input: {self.input}"
+                f", rt: {self.e - self.s}"
+            )
         else:
-            print(f"input: {self.input} FAILED!")
-            print(f"expected: {self.expected}")
-            print(f"output: {self.output}")
+            print(f"{Red('FAILED')} input: {self.input}")
+            print(f"{'-'*6} expected: {Red(self.expected)}")
+            print(f"{'-'*6} output: {Red(self.output)}")
         return self

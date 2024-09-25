@@ -2,7 +2,7 @@
 # https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 # https://www.codingninjas.com/codestudio/problems/630418?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website&leftPanelTab=0
 
-from dsa.utils import TestRunner
+from utils import TestRunner
 
 
 class SolutionOptimal:

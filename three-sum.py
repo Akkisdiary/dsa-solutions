@@ -1,7 +1,7 @@
 # Three sum
 # https://www.naukri.com/code360/problems/three-sum_6922132
 
-from dsa.utils import TestRunner
+from utils import TestRunner
 
 
 class SolutionBrute:

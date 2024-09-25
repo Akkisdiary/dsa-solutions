@@ -1,7 +1,7 @@
 # Subarray with given XOR
 # https://www.interviewbit.com/problems/subarray-with-given-xor/
 
-from dsa.utils import TestRunner
+from utils import TestRunner
 
 
 class SolutionBrute:

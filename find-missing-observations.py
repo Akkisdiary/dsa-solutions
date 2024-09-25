@@ -1,7 +1,7 @@
 # 2028. Find Missing Observations
 # https://leetcode.com/problems/find-missing-observations/description
 
-from dsa.utils import TestRunner
+from utils import TestRunner
 
 
 class Solution:

@@ -3,10 +3,24 @@ class ListNode:
         self.val = val
         self.next = next
 
+    def __as_string(self):
+        arr = []
+        node = self
+        while node:
+            arr.append(node.val)
+            node = node.next
+        return " -> ".join(map(str, arr))
+
+    def __str__(self) -> str:
+        return self.__as_string()
+
+    def __repr__(self) -> str:
+        return self.__as_string()
+
     @classmethod
     def as_linked_list(cls, nodes):
-        """Converts an array of nodes in to
-        a linked list and returns its head"""
+        """Converts an array of nodes into a linked list
+        and returns it's head"""
         parent = cls()
         node = parent
         for n in nodes:
