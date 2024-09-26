@@ -5,7 +5,7 @@
 from utils import TestRunner, ListNode
 
 
-class Solution:
+class SolutionRecursive:
     def reverseList(self, head):
         return self.solve(head, None)
 
@@ -15,6 +15,20 @@ class Solution:
         nxt = head.next
         head.next = prev
         return self.solve(nxt, head)
+
+
+class SolutionLoop:
+    def reverseList(self, head):
+        if not head:
+            return head
+        prev = None
+        while head.next:
+            nxt = head.next
+            head.next = prev
+            prev = head
+            head = nxt
+        head.next = prev
+        return head
 
 
 test_cases = [
@@ -42,8 +56,14 @@ test_cases = [
         },
         "expected": ListNode.as_linked_list([1]),
     },
+    {
+        "input": {
+            "head": ListNode.as_linked_list([3, 2, 1, 3, 2, 3]),
+        },
+        "expected": ListNode.as_linked_list([3, 2, 3, 1, 2, 3]),
+    },
 ]
 for case in test_cases:
-    TestRunner(Solution().reverseList).case(case).test(
+    TestRunner(SolutionLoop().reverseList).case(case).test(
         lambda x: x.as_list() if x else []
     )
