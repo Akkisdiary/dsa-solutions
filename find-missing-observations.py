@@ -76,9 +76,6 @@ test_cases = [
         "expected": [],
     },
 ]
-for case in test_cases:
-    TestRunner(
-        Solution().missingRolls,
-    ).case(
-        case
-    ).test(lambda x: list(sorted(x)))
+
+if __name__ == "__main__":
+    TestRunner(Solution().missingRolls, test_cases).test()

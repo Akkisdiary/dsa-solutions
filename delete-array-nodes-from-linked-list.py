@@ -5,7 +5,7 @@
 from utils import TestRunner, ListNode
 
 
-class SolutionBrute:
+class Solution:
     def modifiedList(self, nums, head):
         parent = ListNode(next=head)
         memo = set(nums)
@@ -58,11 +58,6 @@ test_cases = [
         "expected": ListNode.as_linked_list([]),
     },
 ]
-for case in test_cases:
-    TestRunner(
-        SolutionBrute().modifiedList,
-    ).case(
-        case
-    ).test(
-        lambda x: list(sorted(x.as_list())) if x else x
-    )
+
+if __name__ == "__main__":
+    TestRunner(Solution().modifiedList, test_cases).test()

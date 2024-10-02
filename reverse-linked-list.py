@@ -63,7 +63,6 @@ test_cases = [
         "expected": ListNode.as_linked_list([3, 2, 3, 1, 2, 3]),
     },
 ]
-for case in test_cases:
-    TestRunner(SolutionLoop().reverseList).case(case).test(
-        lambda x: x.as_list() if x else []
-    )
+
+if __name__ == "__main__":
+    TestRunner(SolutionLoop().reverseList, test_cases).test()

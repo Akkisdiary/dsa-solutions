@@ -5,7 +5,7 @@
 from utils import TestRunner
 
 
-class MyCalendarBrute:
+class MyCalendar:
     def __init__(self):
         self.bookings = []
 
@@ -47,6 +47,6 @@ test_cases = [
         "expected": [None, True, True, False, False, True, False, True, True, True, False],
     },
 ]
-# TODO: Need to figure out how to test
-# for case in test_cases:
-#     TestRunner(SolutionOptimal().isPalindrome).case(case).test()
+
+# if __name__ == "__main__":
+#     TestRunner(MyCalendar().trap, test_cases).test()

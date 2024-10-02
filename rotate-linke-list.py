@@ -49,7 +49,6 @@ test_cases = [
         "expected": ListNode.as_linked_list([1, 2]),
     },
 ]
-for case in test_cases:
-    TestRunner(Solution().rotateRight).case(case).test(
-        lambda x: x.as_list() if x else None
-    )
+
+if __name__ == "__main__":
+    TestRunner(Solution().rotateRight, test_cases).test()

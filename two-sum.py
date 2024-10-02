@@ -77,7 +77,6 @@ test_cases = [
         "expected": [2, 5]
     },
 ]
-for case in test_cases:
-    TestRunner(
-        SolutionOptimal().twoSum,
-    ).case(case).test(lambda x: list(sorted(x)))
+
+if __name__ == "__main__":
+    TestRunner(SolutionOptimal().twoSum, test_cases).test()

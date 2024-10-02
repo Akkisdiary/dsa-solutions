@@ -5,7 +5,7 @@
 from utils import TestRunner
 
 
-class SolutionOptimal:
+class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         ans = 0
         seen = set()
@@ -41,5 +41,6 @@ test_cases = [
         "expected": 3,
     },
 ]
-for case in test_cases:
-    TestRunner(SolutionOptimal().lengthOfLongestSubstring).case(case).test()
+
+if __name__ == "__main__":
+    TestRunner(Solution().lengthOfLongestSubstring, test_cases).test()

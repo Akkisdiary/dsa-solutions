@@ -79,7 +79,6 @@ test_cases = [
         "expected": [],
     },
 ]
-for case in test_cases:
-    TestRunner(SolutionOptimal().triplet).case(case).test(
-        lambda x: list(map(lambda i: tuple(sorted(i)), x))
-    )
+
+if __name__ == "__main__":
+    TestRunner(SolutionOptimal().triplet, test_cases).test()

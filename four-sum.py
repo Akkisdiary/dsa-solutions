@@ -87,9 +87,6 @@ test_cases = [
         "expected": [],
     },
 ]
-for case in test_cases:
-    TestRunner(
-        SolutionOptimal().fourSum,
-    ).case(
-        case
-    ).test(lambda x: list(map(lambda i: tuple(sorted(i)), x)))
+
+if __name__ == "__main__":
+    TestRunner(SolutionBetter().fourSum, test_cases).test()

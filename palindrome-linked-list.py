@@ -141,5 +141,6 @@ test_cases = [
         "expected": False,
     },
 ]
-for case in test_cases:
-    TestRunner(SolutionOptimal().isPalindrome).case(case).test()
+
+if __name__ == "__main__":
+    TestRunner(SolutionOptimal().isPalindrome, test_cases).test()

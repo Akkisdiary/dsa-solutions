@@ -59,5 +59,6 @@ test_cases = [
         "expected": 2,
     },
 ]
-for case in test_cases:
-    TestRunner(SolutionOptimal().solve).case(case).test()
+
+if __name__ == "__main__":
+    TestRunner(SolutionOptimal().solve, test_cases).test()

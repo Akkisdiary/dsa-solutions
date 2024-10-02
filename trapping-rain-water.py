@@ -62,7 +62,7 @@ class SolutionBrute:
         return water
 
 
-class SolutionBetter:
+class SolutionOptimal:
     def trap(self, height):
         water = i = 0
         j = len(height) - 1
@@ -120,4 +120,4 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(SolutionBetter().trap, test_cases).test()
+    TestRunner(SolutionOptimal().trap, test_cases).test()
