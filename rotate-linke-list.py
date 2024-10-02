@@ -51,4 +51,4 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(Solution().rotateRight, test_cases).test()
+    TestRunner(Solution().rotateRight, test_cases).test(lambda x: x.as_list() if x else None)

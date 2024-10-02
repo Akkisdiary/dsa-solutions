@@ -78,4 +78,6 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(Solution().missingRolls, test_cases).test()
+    TestRunner(Solution().missingRolls, test_cases).test(
+        lambda x: list(sorted(x))
+    )

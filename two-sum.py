@@ -79,4 +79,4 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(SolutionOptimal().twoSum, test_cases).test()
+    TestRunner(SolutionOptimal().twoSum, test_cases).test(lambda x: list)

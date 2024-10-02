@@ -60,4 +60,6 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(Solution().modifiedList, test_cases).test()
+    TestRunner(Solution().modifiedList, test_cases).test(
+        lambda x: list(sorted(x.as_list())) if x else x
+    )

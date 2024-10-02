@@ -89,4 +89,7 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(SolutionBetter().fourSum, test_cases).test()
+    TestRunner(SolutionOptimal().fourSum, test_cases).test(
+        lambda x: list(map(lambda i: tuple(sorted(i)), x))
+    )
+
