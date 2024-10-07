@@ -1,5 +1,4 @@
 # Subset Sum
-# Subset Sum
 # https://www.geeksforgeeks.org/problems/subset-sums2234/1
 # https://www.codingninjas.com/codestudio/problems/subset-sum_3843086
 
