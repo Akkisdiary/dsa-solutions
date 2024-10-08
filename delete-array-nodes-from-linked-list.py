@@ -21,7 +21,7 @@ class Solution:
         return parent.next
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "nums": [1, 2, 3],
@@ -60,6 +60,7 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(Solution().modifiedList, test_cases).test(
+    TestRunner(Solution().modifiedList).test(
+        cases,
         lambda x: list(sorted(x.as_list())) if x else x
     )

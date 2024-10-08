@@ -17,7 +17,7 @@ class Solution:
         return content
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "g": [1, 2, 3],
@@ -43,4 +43,4 @@ test_cases = [
 
 
 if __name__ == "__main__":
-    TestRunner(Solution().findContentChildren, test_cases).test()
+    TestRunner(Solution().findContentChildren).test(cases)

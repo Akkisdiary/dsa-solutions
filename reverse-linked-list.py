@@ -31,7 +31,7 @@ class SolutionLoop:
         return head
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "head": ListNode.as_linked_list([1, 2, 3, 4, 5]),
@@ -65,4 +65,7 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(SolutionLoop().reverseList, test_cases).test(lambda x: x.as_list() if x else [])
+    TestRunner(SolutionLoop().reverseList).test(
+        cases,
+        lambda x: x.as_list() if x else []
+    )

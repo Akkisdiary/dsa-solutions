@@ -35,7 +35,7 @@ class Solution:
         return value
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "arr": [Item(60, 10), Item(100, 20), Item(120, 30)],
@@ -55,4 +55,4 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(Solution().fractionalKnapsack, test_cases).test()
+    TestRunner(Solution().fractionalKnapsack).test(cases)

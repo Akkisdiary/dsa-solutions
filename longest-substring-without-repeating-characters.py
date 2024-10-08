@@ -21,7 +21,7 @@ class Solution:
         return ans
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "s": "abcabcbb",
@@ -43,4 +43,4 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(Solution().lengthOfLongestSubstring, test_cases).test()
+    TestRunner(Solution().lengthOfLongestSubstring).test(cases)

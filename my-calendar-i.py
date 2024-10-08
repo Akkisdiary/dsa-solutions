@@ -17,7 +17,7 @@ class MyCalendar:
         return True
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "actions": ["MyCalendar", "book", "book", "book"],
@@ -49,4 +49,4 @@ test_cases = [
 ]
 
 # if __name__ == "__main__":
-#     TestRunner(MyCalendar().trap, test_cases).test()
+#     TestRunner(MyCalendar().trap).test(cases)

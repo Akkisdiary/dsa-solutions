@@ -43,7 +43,7 @@ class Solution:
         return -1
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "coins": [1, 5, 6, 9],
@@ -118,4 +118,4 @@ test_cases = [
 
 
 if __name__ == "__main__":
-    TestRunner(Solution().coinChange, test_cases).test()
+    TestRunner(Solution().coinChange).test(cases)

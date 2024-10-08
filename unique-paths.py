@@ -1,6 +1,8 @@
 # 62. Unique Paths
 # https://leetcode.com/problems/unique-paths/description/
 
+from utils import TestRunner
+
 
 class SolutionBrute:
     # TC: O(2^m*n)
@@ -52,7 +54,7 @@ class SolutionBest:
         return int(ans)
 
 
-test_cases = [
+cases = [
     # (input, expected_output),
     ((3, 7), 28),
     ((3, 2), 3),
@@ -63,9 +65,6 @@ test_cases = [
     ((5, 10), 715),
     ((13, 20), 141120525),
 ]
-for input, expected in test_cases:
-    ans = SolutionBest().uniquePaths(*input)
-    if ans != expected:
-        print(f"FAILED: {input=}")
-        print(f"{ans=}")
-        print(f"{expected=}")
+
+if __name__ == '__main__':
+    TestRunner(SolutoinBest().uniquePaths).test(cases)

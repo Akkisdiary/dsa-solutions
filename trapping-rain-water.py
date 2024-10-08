@@ -86,7 +86,7 @@ class SolutionOptimal:
         return water
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "height": [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1],
@@ -120,4 +120,4 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(SolutionOptimal().trap, test_cases).test()
+    TestRunner(SolutionOptimal().trap).test(cases)

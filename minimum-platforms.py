@@ -48,7 +48,7 @@ class SolutionBetter:
         return ans
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "arr": ["0900", "0940", "0950", "1100", "1500", "1800"],
@@ -73,4 +73,4 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(SolutionBetter().minimumPlatform, test_cases).test()
+    TestRunner(SolutionBetter().minimumPlatform).test(cases)

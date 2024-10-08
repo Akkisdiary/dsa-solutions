@@ -36,7 +36,7 @@ class SolutionOptimal:
         return count
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "A": [4, 2, 2, 6, 4],
@@ -61,4 +61,4 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(SolutionOptimal().solve, test_cases).test()
+    TestRunner(SolutionOptimal().solve).test(cases)

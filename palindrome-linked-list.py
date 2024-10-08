@@ -97,7 +97,7 @@ class SolutionOptimal:
         return solve(head, None)
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "head": ListNode.as_linked_list([1, 2, 2, 1]),
@@ -143,4 +143,4 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(SolutionOptimal().isPalindrome, test_cases).test()
+    TestRunner(SolutionOptimal().isPalindrome).test(cases)

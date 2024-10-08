@@ -56,7 +56,7 @@ class SolutionOptimal:
         return ans
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "arr": [-1, -1, 2, 0, 1],
@@ -81,4 +81,4 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(SolutionOptimal().triplet, test_cases).test()
+    TestRunner(SolutionOptimal().triplet).test(cases)

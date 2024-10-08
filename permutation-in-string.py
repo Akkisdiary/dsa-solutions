@@ -27,7 +27,7 @@ class Solution:
         return False
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "s1": "ab",
@@ -59,4 +59,4 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(Solution().checkInclusion, test_cases).test()
+    TestRunner(Solution().checkInclusion).test(cases)

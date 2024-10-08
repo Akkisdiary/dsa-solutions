@@ -58,7 +58,7 @@ class SolutionOptimal:
         return j
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "nums": [1, 1, 2],
@@ -80,5 +80,5 @@ test_cases = [
 ]
 
 # TODO: Figure out tests
-if __name__ == "__main__":
-    TestRunner(SolutionOptimal().removeDuplicates, test_cases).test()
+# if __name__ == "__main__":
+#     TestRunner(SolutionOptimal().removeDuplicates).test(cases)

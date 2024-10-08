@@ -28,7 +28,6 @@ class SolutionBrute:
 class SolutionOptimal:
     def subsetsWithDup(self, nums):
         nums.sort()
-        print(nums)
         return self.solve(nums, 0, [], [])
 
     def solve(self, nums, index, ans, subset):
@@ -43,7 +42,7 @@ class SolutionOptimal:
         return ans
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "nums": [1, 2, 2],
@@ -82,4 +81,4 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(SolutionOptimal().subsetsWithDup, test_cases).test(sorted)
+    TestRunner(SolutionOptimal().subsetsWithDup).test(cases, sorted)

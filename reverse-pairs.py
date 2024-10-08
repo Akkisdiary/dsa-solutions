@@ -1,6 +1,8 @@
 # 493. Reverse Pairs
 # https://leetcode.com/problems/reverse-pairs/description/
 
+from utils import TestRunner
+
 
 class SolutionBrute:
     def reversePairs(self, nums):
@@ -63,24 +65,60 @@ class SolutionOptimal:
         return pairs
 
 
-test_cases = [
-    # (input, expected_output),
-    ([0], 0),
-    ([1, 2, 3, 4], 0),
-    ([-5, -5], 1),
-    ([1, 3, 2, 3, 1], 2),
-    ([2, 4, 3, 5, 1], 3),
-    ([9, 4, 1], 3),
-    ([40, 25, 19, 12, 3, 6, 2], 15),
-    ([
-        233, 2000000001, 234, 2000000006, 235, 2000000003, 236,
-        2000000007, 237, 2000000002, 2000000005, 233, 233, 233,
-        233, 233, 2000000004
-    ], 40),
+cases = [
+    {
+        "input": {
+            "nums": [0]
+        },
+        "expected": 0
+    },
+    {
+        "input": {
+            "nums": [1, 2, 3, 4]
+        },
+        "expected": 0
+    },
+    {
+        "input": {
+            "nums": [-5, -5]
+        },
+        "expected": 1
+    },
+    {
+        "input": {
+            "nums": [1, 3, 2, 3, 1]
+        },
+        "expected": 2
+    },
+    {
+        "input": {
+            "nums": [2, 4, 3, 5, 1]
+        },
+        "expected": 3
+    },
+    {
+        "input": {
+            "nums": [9, 4, 1]
+        },
+        "expected": 3
+    },
+    {
+        "input": {
+            "nums": [40, 25, 19, 12, 3, 6, 2]
+        },
+        "expected": 15
+    },
+    {
+        "input": {
+            "nums": [
+                233, 2000000001, 234, 2000000006, 235, 2000000003, 236,
+                2000000007, 237, 2000000002, 2000000005, 233, 233, 233,
+                233, 233, 2000000004
+            ]
+        },
+        "expected": 40
+    },
 ]
-for input, expected in test_cases:
-    ans = SolutionOptimal().reversePairs(input)
-    if ans != expected:
-        print(f"FAILED: {input=}")
-        print(f"{ans=}")
-        print(f"{expected=}")
+
+if __name__ == '__main__':
+    TestRunner(SolutionOptimal().reversePairs).test(cases)

@@ -31,7 +31,7 @@ class SolutionOptimal:
         return maxi
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "arr": [15, -2, 2, -8, 1, 7, 10, 23],
@@ -91,4 +91,4 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(SolutionOptimal().maxLen, test_cases).test()
+    TestRunner(SolutionOptimal().maxLen).test(cases)

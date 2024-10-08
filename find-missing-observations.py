@@ -18,7 +18,7 @@ class Solution:
         return [int(x)] * (n - sub) + [int(x) + 1] * sub
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "rolls": [3, 2, 4, 3],
@@ -78,6 +78,7 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(Solution().missingRolls, test_cases).test(
+    TestRunner(Solution().missingRolls).test(
+        cases,
         lambda x: list(sorted(x))
     )

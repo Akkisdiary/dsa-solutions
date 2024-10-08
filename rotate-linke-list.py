@@ -27,7 +27,7 @@ class Solution:
         return ans
 
 
-test_cases = [
+cases = [
     {
         "input": {"head": ListNode.as_linked_list([1, 2, 3, 4, 5]), "k": 2},
         "expected": ListNode.as_linked_list([4, 5, 1, 2, 3]),
@@ -51,4 +51,7 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(Solution().rotateRight, test_cases).test(lambda x: x.as_list() if x else None)
+    TestRunner(Solution().rotateRight).test(
+        cases,
+        lambda x: x.as_list() if x else None
+    )

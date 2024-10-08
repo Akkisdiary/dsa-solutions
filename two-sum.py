@@ -26,7 +26,7 @@ class SolutionOptimal:
             memo[n] = i
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "nums": [2, 7, 11, 15],
@@ -79,4 +79,4 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(SolutionOptimal().twoSum, test_cases).test(lambda x: list)
+    TestRunner(SolutionOptimal().twoSum).test(cases, list)

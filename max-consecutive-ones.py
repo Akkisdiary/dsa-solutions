@@ -17,7 +17,7 @@ class Solution:
         return ans
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "nums": [1, 1, 0, 1, 1, 1],
@@ -63,4 +63,4 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(SolutionBrute().findMaxConsecutiveOnes, test_cases).test()
+    TestRunner(Solution().findMaxConsecutiveOnes).test(cases)

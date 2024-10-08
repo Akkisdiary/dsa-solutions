@@ -22,7 +22,7 @@ class SolutionBrute:
         )
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "W": 4,
@@ -75,4 +75,4 @@ test_cases = [
 
 
 if __name__ == "__main__":
-    TestRunner(SolutionBrute().knapSack, test_cases).test()
+    TestRunner(SolutionBrute().knapSack).test(cases)

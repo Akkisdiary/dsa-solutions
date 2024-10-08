@@ -18,7 +18,7 @@ class SolutionBrute:
         return ans
 
 
-test_cases = [
+cases = [
     {
         "input": {
             "arr": [2, 3],
@@ -36,4 +36,4 @@ test_cases = [
 ]
 
 if __name__ == "__main__":
-    TestRunner(SolutionBrute().subsetSums, test_cases).test(sorted)
+    TestRunner(SolutionBrute().subsetSums).test(cases, sorted)
