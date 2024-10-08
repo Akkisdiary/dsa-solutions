@@ -1,37 +1,49 @@
-# 39. Combination Sum - https://leetcode.com/problems/combination-sum/
+# 39. Combination Sum
+# https://leetcode.com/problems/combination-sum/
 
-"""
-candidates = [2,3,6,7], target = 7
-Input: candidates = [2,3,6,7], target = 7
-Output: [[2,2,3],[7]]
-
-Input: candidates = [2,3,5], target = 8
-Output: [[2,2,2,2],[2,3,3],[3,5]]
-
-"""
+from utils import TestRunner
 
 
-class Solution(object):
+class Solution:
     def combinationSum(self, candidates, target):
-        """
-        :type candidates: List[int]
-        :type target: int
-        :rtype: List[List[int]]
-        """
         ans = []
-        n = len(candidates)
 
-        def find(i, c, s):
-            if s >= target:
-                if s == target:
-                    ans.append(c)
+        def solve(i, t, subset):
+            if t == 0:
+                ans.append(list(subset))
                 return
+            if i < len(candidates):
+                if candidates[i] <= t:
+                    solve(i, t-candidates[i], subset + [candidates[i]])
+                solve(i+1, t, list(subset))
 
-            for j in range(i, n):
-                find(j, c + [candidates[j]], s + candidates[j])
-
-        find(0, [], 0)
+        solve(0, target, [])
         return ans
 
 
-print(Solution().combinationSum([2, 3, 6, 7], 7))
+cases = [
+    {
+        "input": {
+            "candidates": [2, 3, 6, 7],
+            "target": 7,
+        },
+        "expected": [[2, 2, 3], [7]],
+    },
+    {
+        "input": {
+            "candidates": [2, 3, 5],
+            "target": 8,
+        },
+        "expected": [[2, 2, 2, 2], [2, 3, 3], [3, 5]],
+    },
+    {
+        "input": {
+            "candidates": [2],
+            "target": 1,
+        },
+        "expected": [],
+    },
+]
+
+if __name__ == "__main__":
+    TestRunner(Solution().combinationSum).test(cases)
