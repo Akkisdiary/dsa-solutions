@@ -35,9 +35,8 @@ def _to_str(s, limit=30):
 
 
 class TestRunner:
-    def __init__(self, fn, tc) -> None:
+    def __init__(self, fn) -> None:
         self.run = fn
-        self.test_cases = tc
 
     def _test(self, test_no, case, serialize=(lambda x: x)):
         input = case["input"]
@@ -63,6 +62,7 @@ class TestRunner:
 
         return self
 
-    def test(self, serialize=(lambda x: x)):
-        for i in range(len(self.test_cases)):
-            self._test(i, self.test_cases[i], serialize)
+    def test(self, test_cases, serialize=(lambda x: x)):
+        print(f"Testing {self.run}")
+        for i in range(len(test_cases)):
+            self._test(i, test_cases[i], serialize)
