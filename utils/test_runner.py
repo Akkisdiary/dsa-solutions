@@ -63,6 +63,7 @@ class TestRunner:
         return self
 
     def test(self, test_cases, serialize=(lambda x: x)):
-        print(f"Testing {_yellow(self.run)}")
+        fn_name = f"{self.run.__self__.__class__.__name__}.{self.run.__name__}"
+        print(f"Testing {_yellow(fn_name)}")
         for i in range(len(test_cases)):
             self._test(i, test_cases[i], serialize)
