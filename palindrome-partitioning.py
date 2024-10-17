@@ -1,45 +1,60 @@
-# Palindrome Partitioning
-
+# 131. Palindrome Partitioning
 # https://leetcode.com/problems/palindrome-partitioning/
 
+from utils import TestRunner
 
-class Solution(object):
+
+class Solution:
     def partition(self, s):
-        """
-        :type s: str
-        :rtype: List[List[str]]
-        """
-        ans = []
-        n = len(s)
+        parts = []
+        part = []
 
-        def isPalindrome(p):
-            if len(p) == 0:
-                return False
-
-            i = 0
-            j = len(p) - 1
-
-            while i < j:
-                if p[i] != p[j]:
-                    return False
-                i += 1
-                j -= 1
-
-            return True
-
-        def find(prev, substr):
-            n = len(substr)
-
-            if n == 0:
-                ans.append(prev)
+        def solve(index):
+            if index == len(s):
+                parts.append(part[:])
                 return
+            for i in range(index, len(s)):
+                if self.is_palindrome(s, index, i):
+                    part.append(s[index:i + 1])
+                    solve(i + 1)
+                    part.pop(-1)
 
-            for j in range(n + 1):
-                if isPalindrome(substr[:j]):
-                    find(prev + [substr[:j]], substr[j:])
+        solve(0)
+        return parts
 
-        find([], s)
-        return ans
+    def is_palindrome(self, s, i, j):
+        while i < j:
+            if s[i] != s[j]:
+                return False
+            i += 1
+            j -= 1
+        return True
 
 
-print(Solution().partition("ababa"))
+cases = [
+    {
+        "input": {
+            "s": "aab",
+        },
+        "expected": [["a", "a", "b"], ["aa", "b"]],
+    },
+    {
+        "input": {
+            "s": "a",
+        },
+        "expected": [["a"]],
+    },
+    {
+        "input": {
+            "s": "abcba",
+        },
+        "expected": [
+            ["a", "b", "c", "b", "a"],
+            ["a", "bcb", "a"],
+            ["abcba"],
+        ],
+    },
+]
+
+if __name__ == "__main__":
+    TestRunner(Solution().partition).test(cases, sorted)
