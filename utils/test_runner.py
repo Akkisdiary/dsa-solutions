@@ -57,7 +57,7 @@ class TestRunner:
                 print(f"{pad} expected: {_red(expected)}")
                 print(f"{pad} output: {_red(output)}")
         except Exception:
-            print(f"Runtime Error, input={input}")
+            print(f"{test_no}. {_red('RUNTIME ERROR')}, input={input}")
             print(_red(traceback.format_exc()))
 
         return self
