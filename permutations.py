@@ -21,7 +21,6 @@ class SolutionBrute:
                 swap(index, i)
 
         gen(0)
-        print(permutations)
         return permutations
 
 
