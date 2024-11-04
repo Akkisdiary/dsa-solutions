@@ -67,3 +67,4 @@ class TestRunner:
         print(f"Testing {_yellow(fn_name)}")
         for i in range(len(test_cases)):
             self._test(i, test_cases[i], serialize)
+        return self
