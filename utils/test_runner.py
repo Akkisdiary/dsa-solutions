@@ -42,22 +42,22 @@ class TestRunner:
         input = case["input"]
         expected = case["expected"]
 
+        input_str = _to_str(input)
         try:
             s = time.time()
             output = self.run(**deepcopy(input))
             e = time.time()
 
-            input = _to_str(input)
             rt = round((e - s) * 1000, 6)
             if serialize(output) == serialize(expected):
-                print(f"{test_no}. {_green('PASSED')} input={input}, {rt=}ms")
+                print(f"{test_no}. {_green('PASSED')} input={input_str}, {rt=}ms")
             else:
                 pad = "." * (8 + len(str(test_no)))
-                print(f"{test_no}. {_red('FAILED')} input={input}")
+                print(f"{test_no}. {_red('FAILED')} input={input_str}")
                 print(f"{pad} expected: {_red(expected)}")
                 print(f"{pad} output: {_red(output)}")
         except Exception:
-            print(f"{test_no}. {_red('RUNTIME ERROR')}, input={input}")
+            print(f"{test_no}. {_red('ERROR')}  input={input_str}")
             print(_red(traceback.format_exc()))
 
         return self
