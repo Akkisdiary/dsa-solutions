@@ -4,6 +4,7 @@ https://leetcode.com/problems/next-greater-element-i/description/
 """
 
 from typing import List
+from collections import deque
 
 from utils import TestRunner
 
@@ -31,23 +32,24 @@ class SolutionBrute:
 
 class SolutionBetter:
     def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        ans = []
-        for n in nums1:
-            ans.append(self.find(n, nums2))
-        return ans
+        stack = deque()
+        memo = {}
 
-    def find(self, num: int, nums2: List[int]):
-        i = 0
-        while i < len(nums2):
-            if nums2[i] == num:
-                break
-            i += 1
-        i += 1
-        while i < len(nums2):
-            if nums2[i] > num:
-                return nums2[i]
-            i += 1
-        return -1
+        for i in range(len(nums2) - 1, -1, -1):
+            ng = -1
+            while len(stack) > 0:
+                top = stack.pop()
+                if top > nums2[i]:
+                    ng = top
+                    stack.append(top)
+                    break
+            memo[nums2[i]] = ng
+            stack.append(nums2[i])
+
+        ans = []
+        for i in range(len(nums1)):
+            ans.append(memo.get(nums1[i]))
+        return ans
 
 
 cases = [
