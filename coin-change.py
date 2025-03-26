@@ -5,7 +5,7 @@
 from utils import TestRunner
 
 
-class SolutionBrute:
+class SolutionEasy:
     """Doesn't work where the sum of last 2 coins exceed the third coin"""
     def coinChange(self, coins, amount):
         coins.sort(reverse=True)
@@ -21,7 +21,50 @@ class SolutionBrute:
         return ans
 
 
-class Solution:
+class SolutionBrute:
+    def coinChange(self, coins, amount):
+        def solve(prev, rem):
+            if rem < 0:
+                return -1
+            if rem == 0:
+                return prev
+            result = float("inf")
+            for c in coins:
+                ans = solve(prev + 1, rem - c)
+                if ans >= 0:
+                    result = min(result, ans)
+            if result == float("inf"):
+                result = -1
+            return result
+
+        return solve(0, amount)
+
+
+class SolutionBetter:
+    def coinChange(self, coins, amount):
+        memo = {}
+
+        def solve(prev, rem):
+            if memo.get(rem) is not None:
+                return memo.get(rem)
+            if rem < 0:
+                return -1
+            if rem == 0:
+                return prev
+            result = float("inf")
+            for c in coins:
+                ans = solve(prev + 1, rem - c)
+                if ans >= 0:
+                    result = min(result, ans)
+            if result == float("inf"):
+                result = -1
+            memo[amount] = result
+            return result
+
+        return solve(0, amount)
+
+
+class SolutionBest:
     def coinChange(self, coins, amount):
         if amount == 0 or len(coins) == 0:
             return 0
@@ -118,4 +161,6 @@ cases = [
 
 
 if __name__ == "__main__":
-    TestRunner(Solution().coinChange).test(cases)
+    TestRunner(SolutionBrute().coinChange).test(cases[:1])
+    TestRunner(SolutionBetter().coinChange).test(cases[:1])
+    TestRunner(SolutionBest().coinChange).test(cases[:1])
