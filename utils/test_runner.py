@@ -1,6 +1,7 @@
 import time
 import traceback
 from copy import deepcopy
+from typing import Any, Callable, Dict, List, Type
 
 
 class BColors:
@@ -35,10 +36,12 @@ def _to_str(s, limit=30):
 
 
 class TestRunner:
-    def __init__(self, fn) -> None:
+    def __init__(self, fn: Callable) -> None:
         self.run = fn
 
-    def _test(self, test_no, case, serialize=(lambda x: x)):
+    def _test(
+        self, tid: Any, case: Dict, serialize: Callable = (lambda x: x)
+    ) -> Type["TestRunner"]:
         input = case["input"]
         expected = case["expected"]
 
@@ -50,21 +53,24 @@ class TestRunner:
 
             rt = round((e - s) * 1000, 6)
             if serialize(output) == serialize(expected):
-                print(f"{test_no}. {_green('PASSED')} input={input_str}, {rt=}ms")
+                print(f"{tid}. {_green('PASSED')} input={input_str}, {rt=}ms")
             else:
-                pad = "." * (8 + len(str(test_no)))
-                print(f"{test_no}. {_red('FAILED')} input={input_str}")
+                pad = "." * (8 + len(str(tid)))
+                print(f"{tid}. {_red('FAILED')} input={input_str}")
                 print(f"{pad} expected: {_red(expected)}")
                 print(f"{pad} output: {_red(output)}")
         except Exception:
-            print(f"{test_no}. {_red('ERROR')}  input={input_str}")
+            print(f"{tid}. {_red('ERROR')}  input={input_str}")
             print(_red(traceback.format_exc()))
 
         return self
 
-    def test(self, test_cases, serialize=(lambda x: x)):
+    def test(
+        self, test_cases: List[Dict], serialize: Callable = (lambda x: x)
+    ) -> Type["TestRunner"]:
         fn_name = f"{self.run.__self__.__class__.__name__}.{self.run.__name__}"
         print(f"Testing {_yellow(fn_name)}")
         for i in range(len(test_cases)):
             self._test(i, test_cases[i], serialize)
+
         return self
