@@ -15,17 +15,17 @@ class SolutionBrute:
             for j in range(C):
                 elements.append(matrix[i][j])
         elements.sort()
-        return elements[R*C // 2]
+        return elements[R * C // 2]
 
 
 class SolutionOptimal:
     def median(self, matrix: List[List[int]], R: int, C: int) -> int:
-        low = float('inf')
-        high = float('-inf')
+        low = float("inf")
+        high = float("-inf")
 
         for i in range(R):
             low = min(low, matrix[i][0])
-            high = max(high, matrix[i][C-1])
+            high = max(high, matrix[i][C - 1])
 
         def countSmallerThan(elem):
             def upperBound(row, num):
@@ -58,61 +58,16 @@ class SolutionOptimal:
 
 cases = [
     {
-        "input": {
-            "matrix": [
-                [1, 3, 5],
-                [2, 6, 9],
-                [3, 6, 9],
-            ],
-            "R": 3,
-            "C": 3,
-        },
+        "input": {"matrix": [[1, 3, 5], [2, 6, 9], [3, 6, 9]], "R": 3, "C": 3},
         "expected": 5,
     },
     {
-        "input": {
-            "matrix": [
-                [1, 3, 6],
-                [2, 5, 9],
-                [3, 6, 9],
-            ],
-            "R": 3,
-            "C": 3,
-        },
+        "input": {"matrix": [[1, 3, 6], [2, 5, 9], [3, 6, 9]], "R": 3, "C": 3},
         "expected": 5,
     },
-    {
-        "input": {
-            "matrix": [
-                [1],
-                [2],
-                [3]
-            ],
-            "R": 3,
-            "C": 1,
-        },
-        "expected": 2,
-    },
-    {
-        "input": {
-            "matrix": [
-                [1, 2, 3],
-            ],
-            "R": 1,
-            "C": 3,
-        },
-        "expected": 2,
-    },
-    {
-        "input": {
-            "matrix": [
-                [1],
-            ],
-            "R": 1,
-            "C": 1,
-        },
-        "expected": 1,
-    },
+    {"input": {"matrix": [[1], [2], [3]], "R": 3, "C": 1}, "expected": 2},
+    {"input": {"matrix": [[1, 2, 3]], "R": 1, "C": 3}, "expected": 2},
+    {"input": {"matrix": [[1]], "R": 1, "C": 1}, "expected": 1},
 ]
 
 if __name__ == "__main__":

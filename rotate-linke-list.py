@@ -52,6 +52,5 @@ cases = [
 
 if __name__ == "__main__":
     TestRunner(Solution().rotateRight).test(
-        cases,
-        lambda x: x.as_list() if x else None
+        cases, lambda x: x.as_list() if x else None
     )

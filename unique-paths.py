@@ -66,5 +66,5 @@ cases = [
     ((13, 20), 141120525),
 ]
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     TestRunner(SolutoinBest().uniquePaths).test(cases)

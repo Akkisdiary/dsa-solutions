@@ -44,27 +44,13 @@ class SolutionOptimal:
 
 cases = [
     {
-        "input": {
-            "nums": [1, 2, 2],
-        },
+        "input": {"nums": [1, 2, 2]},
         "expected": [[], [1], [1, 2], [1, 2, 2], [2], [2, 2]],
     },
+    {"input": {"nums": [0]}, "expected": [[], [0]]},
+    {"input": {"nums": []}, "expected": [[]]},
     {
-        "input": {
-            "nums": [0],
-        },
-        "expected": [[], [0]],
-    },
-    {
-        "input": {
-            "nums": [],
-        },
-        "expected": [[]],
-    },
-    {
-        "input": {
-            "nums": [4, 4, 4, 1, 4],
-        },
+        "input": {"nums": [4, 4, 4, 1, 4]},
         "expected": [
             [],
             [1],

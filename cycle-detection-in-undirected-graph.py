@@ -32,13 +32,4 @@ def cycleDetection(edges, n, m):
     return "No"
 
 
-print(
-    cycleDetection(
-        [
-            [1, 2],
-            [2, 3],
-        ],
-        3,
-        2,
-    )
-)
+print(cycleDetection([[1, 2], [2, 3]], 3, 2))

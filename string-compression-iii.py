@@ -21,18 +21,8 @@ class SolutionBrute:
 
 
 cases = [
-    {
-        "input": {
-            "word": "abcde",
-        },
-        "expected": "1a1b1c1d1e",
-    },
-    {
-        "input": {
-            "word": "aaaaaaaaaaaaaabb",
-        },
-        "expected": "9a5a2b",
-    },
+    {"input": {"word": "abcde"}, "expected": "1a1b1c1d1e"},
+    {"input": {"word": "aaaaaaaaaaaaaabb"}, "expected": "9a5a2b"},
 ]
 
 if __name__ == "__main__":

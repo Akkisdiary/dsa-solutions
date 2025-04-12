@@ -62,10 +62,12 @@ class SolutionOptimal:
             if nums[mid - 1] != nums[mid] != nums[mid + 1]:
                 return nums[mid]
 
-            if any((
-                mid % 2 == 0 and nums[mid] != nums[mid + 1],
-                mid % 2 == 1 and nums[mid] != nums[mid - 1],
-            )):
+            if any(
+                (
+                    mid % 2 == 0 and nums[mid] != nums[mid + 1],
+                    mid % 2 == 1 and nums[mid] != nums[mid - 1],
+                )
+            ):
                 j = mid - 1
             else:
                 i = mid + 1
@@ -74,48 +76,13 @@ class SolutionOptimal:
 
 
 cases = [
-    {
-        "input": {
-            "nums": [1, 1, 2, 3, 3, 4, 4, 8, 8],
-        },
-        "expected": 2,
-    },
-    {
-        "input": {
-            "nums": [3, 3, 7, 7, 10, 11, 11],
-        },
-        "expected": 10,
-    },
-    {
-        "input": {
-            "nums": [3, 7, 7],
-        },
-        "expected": 3,
-    },
-    {
-        "input": {
-            "nums": [3, 3, 7],
-        },
-        "expected": 7,
-    },
-    {
-        "input": {
-            "nums": [3, 3, 4, 4, 7],
-        },
-        "expected": 7,
-    },
-    {
-        "input": {
-            "nums": [3],
-        },
-        "expected": 3,
-    },
-    {
-        "input": {
-            "nums": [7, 7, 10, 11, 11, 12, 12],
-        },
-        "expected": 10,
-    },
+    {"input": {"nums": [1, 1, 2, 3, 3, 4, 4, 8, 8]}, "expected": 2},
+    {"input": {"nums": [3, 3, 7, 7, 10, 11, 11]}, "expected": 10},
+    {"input": {"nums": [3, 7, 7]}, "expected": 3},
+    {"input": {"nums": [3, 3, 7]}, "expected": 7},
+    {"input": {"nums": [3, 3, 4, 4, 7]}, "expected": 7},
+    {"input": {"nums": [3]}, "expected": 3},
+    {"input": {"nums": [7, 7, 10, 11, 11, 12, 12]}, "expected": 10},
 ]
 
 if __name__ == "__main__":

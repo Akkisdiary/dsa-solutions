@@ -12,7 +12,7 @@ class TreeNode:
 
 class SolutionBrute:
     def kthSmallest(self, root, k):
-        return self.inorder(root)[k-1]
+        return self.inorder(root)[k - 1]
 
     def inorder(self, root):
         if not root:

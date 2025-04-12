@@ -41,43 +41,28 @@ class SolutionOptimal:
                 if s == 0:
                     ans.append([arr[i], arr[j], arr[k]])
                     j += 1
-                    while i < j < k and arr[j] == arr[j-1]:
+                    while i < j < k and arr[j] == arr[j - 1]:
                         j += 1
                     k -= 1
-                    while i < j < k < n-1 and arr[k] == arr[k+1]:
+                    while i < j < k < n - 1 and arr[k] == arr[k + 1]:
                         k -= 1
                 elif s < 0:
                     j += 1
                 else:
                     k -= 1
             i += 1
-            while i < n and arr[i] == arr[i-1]:
+            while i < n and arr[i] == arr[i - 1]:
                 i += 1
         return ans
 
 
 cases = [
     {
-        "input": {
-            "arr": [-1, -1, 2, 0, 1],
-            "n": 5,
-        },
+        "input": {"arr": [-1, -1, 2, 0, 1], "n": 5},
         "expected": [[-1, -1, 2], [-1, 0, 1]],
     },
-    {
-        "input": {
-            "arr": [0, 0, 0, 0],
-            "n": 4,
-        },
-        "expected": [[0, 0, 0]],
-    },
-    {
-        "input": {
-            "arr": [1, 5, 6, 3],
-            "n": 4,
-        },
-        "expected": [],
-    },
+    {"input": {"arr": [0, 0, 0, 0], "n": 4}, "expected": [[0, 0, 0]]},
+    {"input": {"arr": [1, 5, 6, 3], "n": 4}, "expected": []},
 ]
 
 if __name__ == "__main__":

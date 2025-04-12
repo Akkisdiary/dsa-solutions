@@ -22,24 +22,9 @@ class Solution:
 
 
 cases = [
-    {
-        "input": {
-            "s": "abcabcbb",
-        },
-        "expected": 3,
-    },
-    {
-        "input": {
-            "s": "bbbbb",
-        },
-        "expected": 1,
-    },
-    {
-        "input": {
-            "s": "pwwkew",
-        },
-        "expected": 3,
-    },
+    {"input": {"s": "abcabcbb"}, "expected": 3},
+    {"input": {"s": "bbbbb"}, "expected": 1},
+    {"input": {"s": "pwwkew"}, "expected": 3},
 ]
 
 if __name__ == "__main__":

@@ -10,7 +10,7 @@ class SolutionBrute:
         i = 1
         k = n - 1
         while i <= k:
-            if nums[i] == nums[i-1]:
+            if nums[i] == nums[i - 1]:
                 k = self.left_shift(nums, i, k)
             else:
                 i += 1
@@ -18,7 +18,7 @@ class SolutionBrute:
 
     def left_shift(self, nums, i, k):
         while i < k:
-            nums[i] = nums[i+1]
+            nums[i] = nums[i + 1]
             i += 1
         nums[i] = None
         return k - 1
@@ -38,7 +38,7 @@ class SolutionBetter2:
         ans = [nums[0]]
         i = 1
         while i < len(nums):
-            if nums[i] != nums[i-1]:
+            if nums[i] != nums[i - 1]:
                 ans.append(nums[i])
             i += 1
         k = len(ans)
@@ -51,7 +51,7 @@ class SolutionOptimal:
     def removeDuplicates(self, nums):
         i = j = 1
         while i < len(nums):
-            if nums[i] != nums[i-1]:
+            if nums[i] != nums[i - 1]:
                 nums[j] = nums[i]
                 j += 1
             i += 1
@@ -59,21 +59,14 @@ class SolutionOptimal:
 
 
 cases = [
+    {"input": {"nums": [1, 1, 2]}, "expected": [1, 2]},
     {
-        "input": {
-            "nums": [1, 1, 2],
-        },
-        "expected": [1, 2],
-    },
-    {
-        "input": {
-            "nums": [0, 0, 1, 1, 1, 2, 2, 3, 3, 4],
-        },
+        "input": {"nums": [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]},
         "expected": [0, 1, 2, 3, 4],
     },
     {
         "input": {
-            "nums": [-50, -50, -50, -45, -45, -45, -30, -30, -30, -25, -25, -25],
+            "nums": [-50, -50, -50, -45, -45, -45, -30, -30, -30, -25, -25, -25]
         },
         "expected": [-50, -45, -30, -25],
     },

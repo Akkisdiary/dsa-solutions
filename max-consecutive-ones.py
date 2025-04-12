@@ -18,48 +18,13 @@ class Solution:
 
 
 cases = [
-    {
-        "input": {
-            "nums": [1, 1, 0, 1, 1, 1],
-        },
-        "expected": 3,
-    },
-    {
-        "input": {
-            "nums": [1, 0, 1, 1, 0, 1],
-        },
-        "expected": 2,
-    },
-    {
-        "input": {
-            "nums": [1, 1, 1, 1],
-        },
-        "expected": 4,
-    },
-    {
-        "input": {
-            "nums": [0, 0, 0, 0],
-        },
-        "expected": 0,
-    },
-    {
-        "input": {
-            "nums": [0, 0, 1],
-        },
-        "expected": 1,
-    },
-    {
-        "input": {
-            "nums": [1, 0, 0],
-        },
-        "expected": 1,
-    },
-    {
-        "input": {
-            "nums": [],
-        },
-        "expected": 0,
-    },
+    {"input": {"nums": [1, 1, 0, 1, 1, 1]}, "expected": 3},
+    {"input": {"nums": [1, 0, 1, 1, 0, 1]}, "expected": 2},
+    {"input": {"nums": [1, 1, 1, 1]}, "expected": 4},
+    {"input": {"nums": [0, 0, 0, 0]}, "expected": 0},
+    {"input": {"nums": [0, 0, 1]}, "expected": 1},
+    {"input": {"nums": [1, 0, 0]}, "expected": 1},
+    {"input": {"nums": []}, "expected": 0},
 ]
 
 if __name__ == "__main__":

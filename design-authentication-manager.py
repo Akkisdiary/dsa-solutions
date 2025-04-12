@@ -5,7 +5,6 @@ https://leetcode.com/problems/design-authentication-manager/
 
 
 class AuthenticationManager:
-
     def __init__(self, timeToLive: int):
         self.timeToLive = timeToLive
         self.tokens = {}

@@ -50,16 +50,21 @@ class SolutionBetter:
             mid1 = (i + j) // 2
             mid2 = half - mid1
 
-            l1, l2, r1, r2 = float("-inf"), float("-inf"), float("inf"), float("inf")
+            l1, l2, r1, r2 = (
+                float("-inf"),
+                float("-inf"),
+                float("inf"),
+                float("inf"),
+            )
 
             if mid1 < n1:
                 r1 = nums1[mid1]
             if mid2 < n2:
                 r2 = nums2[mid2]
             if mid1 - 1 >= 0:
-                l1 = nums1[mid1-1]
+                l1 = nums1[mid1 - 1]
             if mid2 - 1 >= 0:
-                l2 = nums2[mid2-1]
+                l2 = nums2[mid2 - 1]
 
             if l1 <= r2 and l2 <= r1:
                 if n % 2 == 1:
@@ -74,29 +79,17 @@ class SolutionBetter:
 
 
 cases = [
+    {"input": {"nums1": [1, 3], "nums2": [2]}, "expected": 2.0},
     {
-        "input": {"nums1": [1, 3], "nums2": [2]},
-        "expected": 2.0,
-    },
-    {
-        "input": {
-            "nums1": [2, 3, 6, 15],
-            "nums2": [1, 3, 4, 7, 10, 12],
-        },
+        "input": {"nums1": [2, 3, 6, 15], "nums2": [1, 3, 4, 7, 10, 12]},
         "expected": 5,
     },
-    {
-        "input": {"nums1": [1, 2], "nums2": [3, 4]},
-        "expected": 2.5,
-    },
+    {"input": {"nums1": [1, 2], "nums2": [3, 4]}, "expected": 2.5},
     {
         "input": {"nums1": [0, 1, 2, 4, 5, 6, 7], "nums2": [5, 6, 7]},
         "expected": 5.0,
     },
-    {
-        "input": {"nums1": [3, 3, 3, 4], "nums2": [1, 2, 2, 3]},
-        "expected": 3,
-    },
+    {"input": {"nums1": [3, 3, 3, 4], "nums2": [1, 2, 2, 3]}, "expected": 3},
 ]
 
 if __name__ == "__main__":

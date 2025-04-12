@@ -23,7 +23,7 @@ class SolutionOptimal:
         high = m
         while low <= high:
             mid = (low + high) // 2
-            midN = mid ** n
+            midN = mid**n
             if midN == m:
                 return mid
             if midN > m:
@@ -34,23 +34,10 @@ class SolutionOptimal:
 
 
 cases = [
-    {
-        "input": {"n": 3, "m": 27},
-        "expected": 3,
-    },
-    {
-        "input": {"n": 69, "m": 4},
-        "expected": -1,
-    },
-    {
-        "input": {"n": 9, "m": 1953125},
-        "expected": 5,
-    },
-    {
-        "input": {"n": 8, "m": 214358881},
-        "expected": 11,
-    },
-
+    {"input": {"n": 3, "m": 27}, "expected": 3},
+    {"input": {"n": 69, "m": 4}, "expected": -1},
+    {"input": {"n": 9, "m": 1953125}, "expected": 5},
+    {"input": {"n": 8, "m": 214358881}, "expected": 11},
 ]
 
 if __name__ == "__main__":

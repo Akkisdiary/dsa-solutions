@@ -25,34 +25,10 @@ class SolutionBetter:
 
 
 cases = [
-    {
-        "input": {
-            "s": "abcde",
-            "goal": "cdeab",
-        },
-        "expected": True,
-    },
-    {
-        "input": {
-            "s": "abcde",
-            "goal": "abced",
-        },
-        "expected": False,
-    },
-    {
-        "input": {
-            "s": "abcdeabcde",
-            "goal": "abcedabcde",
-        },
-        "expected": False,
-    },
-    {
-        "input": {
-            "s": "abcdeabcde",
-            "goal": "eabcdeabcd",
-        },
-        "expected": True,
-    },
+    {"input": {"s": "abcde", "goal": "cdeab"}, "expected": True},
+    {"input": {"s": "abcde", "goal": "abced"}, "expected": False},
+    {"input": {"s": "abcdeabcde", "goal": "abcedabcde"}, "expected": False},
+    {"input": {"s": "abcdeabcde", "goal": "eabcdeabcd"}, "expected": True},
 ]
 
 if __name__ == "__main__":

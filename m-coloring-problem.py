@@ -32,22 +32,8 @@ class SolutionBrute:
 
 
 cases = [
-    {
-        "input": {
-            "v": 2,
-            "edges": [(0, 1)],
-            "m": 2,
-        },
-        "expected": True,
-    },
-    {
-        "input": {
-            "v": 2,
-            "edges": [(0, 1)],
-            "m": 1,
-        },
-        "expected": False,
-    },
+    {"input": {"v": 2, "edges": [(0, 1)], "m": 2}, "expected": True},
+    {"input": {"v": 2, "edges": [(0, 1)], "m": 1}, "expected": False},
     {
         "input": {
             "v": 4,
@@ -57,11 +43,7 @@ cases = [
         "expected": True,
     },
     {
-        "input": {
-            "v": 3,
-            "edges": [(0, 1), (1, 2), (0, 2)],
-            "m": 2,
-        },
+        "input": {"v": 3, "edges": [(0, 1), (1, 2), (0, 2)], "m": 2},
         "expected": False,
     },
 ]

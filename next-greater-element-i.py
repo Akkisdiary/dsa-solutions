@@ -10,7 +10,9 @@ from utils import TestRunner
 
 
 class SolutionBrute:
-    def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
+    def nextGreaterElement(
+        self, nums1: List[int], nums2: List[int]
+    ) -> List[int]:
         ans = []
         for n in nums1:
             ans.append(self.find(n, nums2))
@@ -31,7 +33,9 @@ class SolutionBrute:
 
 
 class SolutionBetter:
-    def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
+    def nextGreaterElement(
+        self, nums1: List[int], nums2: List[int]
+    ) -> List[int]:
         stack = deque()
         memo = {}
 
@@ -53,7 +57,10 @@ class SolutionBetter:
 
 
 cases = [
-    {"input": {"nums1": [4, 1, 2], "nums2": [1, 3, 4, 2]}, "expected": [-1, 3, -1]},
+    {
+        "input": {"nums1": [4, 1, 2], "nums2": [1, 3, 4, 2]},
+        "expected": [-1, 3, -1],
+    },
     {"input": {"nums1": [2, 4], "nums2": [1, 2, 3, 4]}, "expected": [3, -1]},
 ]
 

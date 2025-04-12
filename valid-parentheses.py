@@ -12,9 +12,9 @@ class Solution:
             # '(': ')',
             # '[': ']',
             # '{': '}',
-            ')': '(',
-            ']': '[',
-            '}': '{',
+            ")": "(",
+            "]": "[",
+            "}": "{",
         }
         stack = []
         for c in s:
@@ -28,26 +28,11 @@ class Solution:
 
 
 cases = [
-    {
-        "input": {"s": "()"},
-        "expected": True
-    },
-    {
-        "input": {"s": "()[]{}"},
-        "expected": True
-    },
-    {
-        "input": {"s": "(]"},
-        "expected": False
-    },
-    {
-        "input": {"s": "([])"},
-        "expected": True
-    },
-    {
-        "input": {"s": "(){}}{"},
-        "expected": False
-    }
+    {"input": {"s": "()"}, "expected": True},
+    {"input": {"s": "()[]{}"}, "expected": True},
+    {"input": {"s": "(]"}, "expected": False},
+    {"input": {"s": "([])"}, "expected": True},
+    {"input": {"s": "(){}}{"}, "expected": False},
 ]
 
 if __name__ == "__main__":

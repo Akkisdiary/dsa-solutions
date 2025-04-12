@@ -19,66 +19,23 @@ class Solution:
 
 
 cases = [
+    {"input": {"rolls": [3, 2, 4, 3], "mean": 4, "n": 2}, "expected": [6, 6]},
     {
-        "input": {
-            "rolls": [3, 2, 4, 3],
-            "mean": 4,
-            "n": 2,
-        },
-        "expected": [6, 6],
-    },
-    {
-        "input": {
-            "rolls": [1, 5, 6],
-            "mean": 3,
-            "n": 4,
-        },
+        "input": {"rolls": [1, 5, 6], "mean": 3, "n": 4},
         "expected": [2, 2, 2, 3],
     },
+    {"input": {"rolls": [1, 2, 3, 4], "mean": 6, "n": 4}, "expected": []},
     {
-        "input": {
-            "rolls": [1, 2, 3, 4],
-            "mean": 6,
-            "n": 4,
-        },
-        "expected": [],
-    },
-    {
-        "input": {
-            "rolls": [1, 5, 6, 2, 3],
-            "mean": 4,
-            "n": 2,
-        },
+        "input": {"rolls": [1, 5, 6, 2, 3], "mean": 4, "n": 2},
         "expected": [6, 5],
     },
+    {"input": {"rolls": [6, 3, 4, 3, 5, 3], "mean": 1, "n": 6}, "expected": []},
     {
-        "input": {
-            "rolls": [6, 3, 4, 3, 5, 3],
-            "mean": 1,
-            "n": 6,
-        },
-        "expected": [],
-    },
-    {
-        "input": {
-            "rolls": [6, 1, 5, 2],
-            "mean": 4,
-            "n": 4,
-        },
+        "input": {"rolls": [6, 1, 5, 2], "mean": 4, "n": 4},
         "expected": [5, 4, 4, 5],
     },
-    {
-        "input": {
-            "rolls": [3, 5, 3],
-            "mean": 5,
-            "n": 3,
-        },
-        "expected": [],
-    },
+    {"input": {"rolls": [3, 5, 3], "mean": 5, "n": 3}, "expected": []},
 ]
 
 if __name__ == "__main__":
-    TestRunner(Solution().missingRolls).test(
-        cases,
-        lambda x: list(sorted(x))
-    )
+    TestRunner(Solution().missingRolls).test(cases, lambda x: list(sorted(x)))

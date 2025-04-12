@@ -7,6 +7,7 @@ from utils import TestRunner
 
 class SolutionEasy:
     """Doesn't work where the sum of last 2 coins exceed the third coin"""
+
     def coinChange(self, coins, amount):
         coins.sort(reverse=True)
         ans = i = 0
@@ -71,7 +72,7 @@ class SolutionBest:
 
         coins.sort()
         # print(coins)
-        ans = [amount+1] * (amount + 1)
+        ans = [amount + 1] * (amount + 1)
         ans[0] = 0
 
         for i in range(1, len(ans)):
@@ -87,76 +88,16 @@ class SolutionBest:
 
 
 cases = [
-    {
-        "input": {
-            "coins": [1, 5, 6, 9],
-            "amount": 11,
-        },
-        "expected": 2,
-    },
-    {
-        "input": {
-            "coins": [186, 419, 83, 408],
-            "amount": 6249,
-        },
-        "expected": 20,
-    },
-    {
-        "input": {
-            "coins": [8, 5, 4, 2],
-            "amount": 1000,
-        },
-        "expected": 125,
-    },
-    {
-        "input": {
-            "coins": [1, 2, 5],
-            "amount": 11,
-        },
-        "expected": 3,
-    },
-    {
-        "input": {
-            "coins": [2],
-            "amount": 3,
-        },
-        "expected": -1,
-    },
-    {
-        "input": {
-            "coins": [1],
-            "amount": 0,
-        },
-        "expected": 0,
-    },
-    {
-        "input": {
-            "coins": [1],
-            "amount": 1,
-        },
-        "expected": 1,
-    },
-    {
-        "input": {
-            "coins": [9, 6, 5, 1],
-            "amount": 19,
-        },
-        "expected": 3,
-    },
-    {
-        "input": {
-            "coins": [5, 1],
-            "amount": 0,
-        },
-        "expected": 0,
-    },
-    {
-        "input": {
-            "coins": [4, 6, 2],
-            "amount": 5,
-        },
-        "expected": -1,
-    },
+    {"input": {"coins": [1, 5, 6, 9], "amount": 11}, "expected": 2},
+    {"input": {"coins": [186, 419, 83, 408], "amount": 6249}, "expected": 20},
+    {"input": {"coins": [8, 5, 4, 2], "amount": 1000}, "expected": 125},
+    {"input": {"coins": [1, 2, 5], "amount": 11}, "expected": 3},
+    {"input": {"coins": [2], "amount": 3}, "expected": -1},
+    {"input": {"coins": [1], "amount": 0}, "expected": 0},
+    {"input": {"coins": [1], "amount": 1}, "expected": 1},
+    {"input": {"coins": [9, 6, 5, 1], "amount": 19}, "expected": 3},
+    {"input": {"coins": [5, 1], "amount": 0}, "expected": 0},
+    {"input": {"coins": [4, 6, 2], "amount": 5}, "expected": -1},
 ]
 
 

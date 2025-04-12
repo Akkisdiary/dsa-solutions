@@ -28,34 +28,10 @@ class Solution:
 
 
 cases = [
-    {
-        "input": {
-            "s1": "ab",
-            "s2": "eidbaooo",
-        },
-        "expected": True,
-    },
-    {
-        "input": {
-            "s1": "ab",
-            "s2": "eidboaoo",
-        },
-        "expected": False,
-    },
-    {
-        "input": {
-            "s1": "adc",
-            "s2": "dcda",
-        },
-        "expected": True,
-    },
-    {
-        "input": {
-            "s1": "hello",
-            "s2": "ooolleoooleh",
-        },
-        "expected": False,
-    },
+    {"input": {"s1": "ab", "s2": "eidbaooo"}, "expected": True},
+    {"input": {"s1": "ab", "s2": "eidboaoo"}, "expected": False},
+    {"input": {"s1": "adc", "s2": "dcda"}, "expected": True},
+    {"input": {"s1": "hello", "s2": "ooolleoooleh"}, "expected": False},
 ]
 
 if __name__ == "__main__":

@@ -18,6 +18,7 @@ from utils import TestRunner
 
 class SolutionBrute:
     """time: O(queries * tokens) ; space: O(tokens + result)"""
+
     def solve(self, ttl: int, queries: List[int]) -> List[int]:
         result = []
         tokens = {}
@@ -49,6 +50,7 @@ class SolutionBrute:
 
 class SolutionBetter:
     """time: O(queries + tokens) ; space: O(tokens + tokens + result)"""
+
     def solve(self, ttl: int, queries: List[int]) -> List[int]:
         result, tokens, freq, i = [], [], {}, 0
         for q in queries:
@@ -75,11 +77,7 @@ cases = [
     {
         "input": {
             "ttl": 5,
-            "queries": [
-                "generate t1 1",
-                "generate t2 2",
-                "count 3",
-            ],
+            "queries": ["generate t1 1", "generate t2 2", "count 3"],
         },
         "expected": [2],
     },
@@ -155,7 +153,7 @@ cases = [
             ],
         },
         "expected": [2, 3, 1, 0, 1],
-    }
+    },
 ]
 
 if __name__ == "__main__":

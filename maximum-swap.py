@@ -9,7 +9,7 @@ class SolutionBrute:
         n = list(str(num))
         for i in range(len(n)):
             maxi = i
-            for j in range(len(n)-1, i, -1):
+            for j in range(len(n) - 1, i, -1):
                 if n[maxi] < n[j]:
                     maxi = j
             if maxi != i:
@@ -19,36 +19,11 @@ class SolutionBrute:
 
 
 cases = [
-    {
-        "input": {
-            "num": 2736
-        },
-        "expected": 7236
-    },
-    {
-        "input": {
-            "num": 9973
-        },
-        "expected": 9973
-    },
-    {
-        "input": {
-            "num": 8345
-        },
-        "expected": 8543
-    },
-    {
-        "input": {
-            "num": 8345
-        },
-        "expected": 8543
-    },
-    {
-        "input": {
-            "num": 1993
-        },
-        "expected": 9913
-    },
+    {"input": {"num": 2736}, "expected": 7236},
+    {"input": {"num": 9973}, "expected": 9973},
+    {"input": {"num": 8345}, "expected": 8543},
+    {"input": {"num": 8345}, "expected": 8543},
+    {"input": {"num": 1993}, "expected": 9913},
 ]
 
 if __name__ == "__main__":

@@ -29,7 +29,7 @@ class Solution:
 
 
 class SolutionBetter:
-    def maximumMeetings(self,n,start,end):
+    def maximumMeetings(self, n, start, end):
         le = -1
         count = 0
         meetings = sorted(zip(start, end), key=lambda x: x[1])

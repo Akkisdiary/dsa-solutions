@@ -33,27 +33,9 @@ class SolutionBetter:
 
 
 cases = [
-    {
-        "input": {
-            "nums": [10, 10, 10, 10, 10],
-            "k": 5,
-        },
-        "expected": 50,
-    },
-    {
-        "input": {
-            "nums": [1, 10, 3, 3, 3],
-            "k": 3,
-        },
-        "expected": 17,
-    },
-    {
-        "input": {
-            "nums": [10, 9, 8, 4, 3, 3, 2, 1],
-            "k": 5,
-        },
-        "expected": 35,
-    },
+    {"input": {"nums": [10, 10, 10, 10, 10], "k": 5}, "expected": 50},
+    {"input": {"nums": [1, 10, 3, 3, 3], "k": 3}, "expected": 17},
+    {"input": {"nums": [10, 9, 8, 4, 3, 3, 2, 1], "k": 5}, "expected": 35},
 ]
 
 if __name__ == "__main__":

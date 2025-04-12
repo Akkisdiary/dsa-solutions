@@ -66,31 +66,17 @@ class SolutionOptimal(object):
 
 cases = [
     {
-        "input": {
-            "nums": [1, 0, -1, 0, -2, 2],
-            "target": 0,
-        },
+        "input": {"nums": [1, 0, -1, 0, -2, 2], "target": 0},
         "expected": [[-2, -1, 1, 2], [-2, 0, 0, 2], [-1, 0, 0, 1]],
     },
     {
-        "input": {
-            "nums": [2, 2, 2, 2, 2],
-            "target": 8,
-        },
+        "input": {"nums": [2, 2, 2, 2, 2], "target": 8},
         "expected": [[2, 2, 2, 2]],
     },
-    {
-        "input": {
-            "nums": [1, 5, 6, 3],
-            "target": 13,
-        },
-        "expected": [],
-    },
+    {"input": {"nums": [1, 5, 6, 3], "target": 13}, "expected": []},
 ]
 
 if __name__ == "__main__":
     TestRunner(SolutionOptimal().fourSum).test(
-        cases,
-        lambda x: list(map(lambda i: tuple(sorted(i)), x))
+        cases, lambda x: list(map(lambda i: tuple(sorted(i)), x))
     )
-

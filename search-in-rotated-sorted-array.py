@@ -19,7 +19,7 @@ class SolutionBrute:
 class SolutionOptimal:
     def search(self, nums: List[int], target: int) -> int:
         i = 0
-        j = len(nums)-1
+        j = len(nums) - 1
         while i <= j:
             mid = (i + j) // 2
             if target == nums[mid]:
@@ -43,69 +43,15 @@ class SolutionOptimal:
 
 
 cases = [
-    {
-        "input": {
-            "nums": [4, 5, 6, 7, 0, 1, 2],
-            "target": 0,
-        },
-        "expected": 4,
-    },
-    {
-        "input": {
-            "nums": [4, 5, 6, 7, 0, 1, 2],
-            "target": 3,
-        },
-        "expected": -1,
-    },
-    {
-        "input": {
-            "nums": [4, 5, 6, 7, 0, 1, 2],
-            "target": 6,
-        },
-        "expected": 2,
-    },
-    {
-        "input": {
-            "nums": [6, 7, 0, 1, 2, 4, 5],
-            "target": 0,
-        },
-        "expected": 2,
-    },
-    {
-        "input": {
-            "nums": [6, 7, 10, 11, 2, 4, 5],
-            "target": 11,
-        },
-        "expected": 3,
-    },
-    {
-        "input": {
-            "nums": [6, 7, 10, 11, 12, 4, 5],
-            "target": 12,
-        },
-        "expected": 4,
-    },
-    {
-        "input": {
-            "nums": [0, 1, 2, 4, 5, 6, 7],
-            "target": 2,
-        },
-        "expected": 2,
-    },
-    {
-        "input": {
-            "nums": [1],
-            "target": 0,
-        },
-        "expected": -1,
-    },
-    {
-        "input": {
-            "nums": [3, 5, 1],
-            "target": 3,
-        },
-        "expected": 0,
-    },
+    {"input": {"nums": [4, 5, 6, 7, 0, 1, 2], "target": 0}, "expected": 4},
+    {"input": {"nums": [4, 5, 6, 7, 0, 1, 2], "target": 3}, "expected": -1},
+    {"input": {"nums": [4, 5, 6, 7, 0, 1, 2], "target": 6}, "expected": 2},
+    {"input": {"nums": [6, 7, 0, 1, 2, 4, 5], "target": 0}, "expected": 2},
+    {"input": {"nums": [6, 7, 10, 11, 2, 4, 5], "target": 11}, "expected": 3},
+    {"input": {"nums": [6, 7, 10, 11, 12, 4, 5], "target": 12}, "expected": 4},
+    {"input": {"nums": [0, 1, 2, 4, 5, 6, 7], "target": 2}, "expected": 2},
+    {"input": {"nums": [1], "target": 0}, "expected": -1},
+    {"input": {"nums": [3, 5, 1], "target": 3}, "expected": 0},
 ]
 
 if __name__ == "__main__":
