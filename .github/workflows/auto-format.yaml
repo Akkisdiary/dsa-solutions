@@ -1,4 +1,4 @@
-name: Ruff Format
+name: CI
 
 on:
   push:
