@@ -99,45 +99,25 @@ class SolutionOptimal:
 
 cases = [
     {
-        "input": {
-            "head": ListNode.as_linked_list([1, 2, 2, 1]),
-        },
+        "input": {"head": ListNode.as_linked_list([1, 2, 2, 1])},
+        "expected": True,
+    },
+    {"input": {"head": ListNode.as_linked_list([1, 2])}, "expected": False},
+    {"input": {"head": ListNode.as_linked_list([])}, "expected": True},
+    {
+        "input": {"head": ListNode.as_linked_list([3, 2, 3, 2, 3])},
         "expected": True,
     },
     {
-        "input": {
-            "head": ListNode.as_linked_list([1, 2]),
-        },
+        "input": {"head": ListNode.as_linked_list([3, 2, 1, 3, 2, 3])},
         "expected": False,
     },
     {
-        "input": {
-            "head": ListNode.as_linked_list([]),
-        },
-        "expected": True,
-    },
-    {
-        "input": {
-            "head": ListNode.as_linked_list([3, 2, 3, 2, 3]),
-        },
-        "expected": True,
-    },
-    {
-        "input": {
-            "head": ListNode.as_linked_list([3, 2, 1, 3, 2, 3]),
-        },
+        "input": {"head": ListNode.as_linked_list([12, 3, 4, 5, 6])},
         "expected": False,
     },
     {
-        "input": {
-            "head": ListNode.as_linked_list([12, 3, 4, 5, 6]),
-        },
-        "expected": False,
-    },
-    {
-        "input": {
-            "head": ListNode.as_linked_list([1, 2, 2, 3, 3, 1]),
-        },
+        "input": {"head": ListNode.as_linked_list([1, 2, 2, 3, 3, 1])},
         "expected": False,
     },
 ]

@@ -9,7 +9,9 @@ def calculate_subscription(expiry_date, months_to_buy, monthly_cost):
     end_day = start_date.day
     end_month = start_date.month + (months_to_buy % 12) - 1
     end_year = start_date.year + (months_to_buy // 12)
-    end_date = datetime.datetime(day=start_date.day, month=end_month, year=end_year)
+    end_date = datetime.datetime(
+        day=start_date.day, month=end_month, year=end_year
+    )
 
     billing_month = (end_date.month % 12) + 1
     billing_year = end_date.year + ((end_date.month + 1) // 12)

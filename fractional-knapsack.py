@@ -21,7 +21,7 @@ class Item:
 
 class Solution:
     def fractionalKnapsack(self, w, arr, n):
-        arr.sort(key=lambda i: (i.value/i.weight), reverse=True)
+        arr.sort(key=lambda i: (i.value / i.weight), reverse=True)
         value = i = 0
         while w > 0 and i < n:
             item = arr[i]
@@ -29,7 +29,7 @@ class Solution:
                 value += item.value
                 w -= item.weight
             else:
-                value += (item.value/item.weight) * w
+                value += (item.value / item.weight) * w
                 w -= w
             i += 1
         return value
@@ -45,11 +45,7 @@ cases = [
         "expected": 240.000000,
     },
     {
-        "input": {
-            "arr": [Item(60, 10), Item(100, 20)],
-            "w": 50,
-            "n": 2,
-        },
+        "input": {"arr": [Item(60, 10), Item(100, 20)], "w": 50, "n": 2},
         "expected": 160.000000,
     },
 ]

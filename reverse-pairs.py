@@ -47,7 +47,7 @@ class SolutionOptimal:
             temp.append(nums[j])
             j += 1
         for i in range(len(temp)):
-            nums[s+i] = temp[i]
+            nums[s + i] = temp[i]
         return paris
 
     def findParis(self, nums, s, m, e):
@@ -66,59 +66,38 @@ class SolutionOptimal:
 
 
 cases = [
-    {
-        "input": {
-            "nums": [0]
-        },
-        "expected": 0
-    },
-    {
-        "input": {
-            "nums": [1, 2, 3, 4]
-        },
-        "expected": 0
-    },
-    {
-        "input": {
-            "nums": [-5, -5]
-        },
-        "expected": 1
-    },
-    {
-        "input": {
-            "nums": [1, 3, 2, 3, 1]
-        },
-        "expected": 2
-    },
-    {
-        "input": {
-            "nums": [2, 4, 3, 5, 1]
-        },
-        "expected": 3
-    },
-    {
-        "input": {
-            "nums": [9, 4, 1]
-        },
-        "expected": 3
-    },
-    {
-        "input": {
-            "nums": [40, 25, 19, 12, 3, 6, 2]
-        },
-        "expected": 15
-    },
+    {"input": {"nums": [0]}, "expected": 0},
+    {"input": {"nums": [1, 2, 3, 4]}, "expected": 0},
+    {"input": {"nums": [-5, -5]}, "expected": 1},
+    {"input": {"nums": [1, 3, 2, 3, 1]}, "expected": 2},
+    {"input": {"nums": [2, 4, 3, 5, 1]}, "expected": 3},
+    {"input": {"nums": [9, 4, 1]}, "expected": 3},
+    {"input": {"nums": [40, 25, 19, 12, 3, 6, 2]}, "expected": 15},
     {
         "input": {
             "nums": [
-                233, 2000000001, 234, 2000000006, 235, 2000000003, 236,
-                2000000007, 237, 2000000002, 2000000005, 233, 233, 233,
-                233, 233, 2000000004
+                233,
+                2000000001,
+                234,
+                2000000006,
+                235,
+                2000000003,
+                236,
+                2000000007,
+                237,
+                2000000002,
+                2000000005,
+                233,
+                233,
+                233,
+                233,
+                233,
+                2000000004,
             ]
         },
-        "expected": 40
+        "expected": 40,
     },
 ]
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     TestRunner(SolutionOptimal().reversePairs).test(cases)

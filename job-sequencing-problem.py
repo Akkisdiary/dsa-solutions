@@ -25,10 +25,10 @@ class Solution:
         done = [0] * max_deadline
         for j in Jobs:
             d = j.deadline
-            while d > 0 and done[d-1] != 0:
+            while d > 0 and done[d - 1] != 0:
                 d -= 1
             if d > 0:
-                done[d-1] = j.profit
+                done[d - 1] = j.profit
         jobs = list(filter(lambda p: p > 0, done))
         cnt = len(jobs)
         profit = sum(jobs)
@@ -38,12 +38,7 @@ class Solution:
 cases = [
     {
         "input": {
-            "Jobs": [
-                Job(1, 4, 20),
-                Job(2, 1, 1),
-                Job(3, 1, 40),
-                Job(4, 1, 30),
-            ],
+            "Jobs": [Job(1, 4, 20), Job(2, 1, 1), Job(3, 1, 40), Job(4, 1, 30)],
             "n": 4,
         },
         "expected": (2, 60),

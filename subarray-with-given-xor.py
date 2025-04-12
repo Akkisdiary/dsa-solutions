@@ -37,27 +37,9 @@ class SolutionOptimal:
 
 
 cases = [
-    {
-        "input": {
-            "A": [4, 2, 2, 6, 4],
-            "B": 6,
-        },
-        "expected": 4,
-    },
-    {
-        "input": {
-            "A": [0, 4, 2, 6, 2, 6, 4],
-            "B": 6,
-        },
-        "expected": 6,
-    },
-    {
-        "input": {
-            "A": [5, 6, 7, 8, 9],
-            "B": 5,
-        },
-        "expected": 2,
-    },
+    {"input": {"A": [4, 2, 2, 6, 4], "B": 6}, "expected": 4},
+    {"input": {"A": [0, 4, 2, 6, 2, 6, 4], "B": 6}, "expected": 6},
+    {"input": {"A": [5, 6, 7, 8, 9], "B": 5}, "expected": 2},
 ]
 
 if __name__ == "__main__":

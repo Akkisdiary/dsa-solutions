@@ -17,7 +17,7 @@ class SolutionBrute:
                 return
             for i in range(index, len(nums)):
                 swap(index, i)
-                gen(index+1)
+                gen(index + 1)
                 swap(index, i)
 
         gen(0)
@@ -25,23 +25,17 @@ class SolutionBrute:
 
 
 cases = [
-    {
-        "input": {
-            "nums": [1]
-        },
-        "expected": [[1]]
-    },
-    {
-        "input": {
-            "nums": [0, 1]
-        },
-        "expected": [[0, 1], [1, 0]]
-    },
+    {"input": {"nums": [1]}, "expected": [[1]]},
+    {"input": {"nums": [0, 1]}, "expected": [[0, 1], [1, 0]]},
     {
         "input": {"nums": [1, 2, 3]},
         "expected": [
-            [1, 2, 3], [1, 3, 2], [2, 1, 3],
-            [2, 3, 1], [3, 1, 2], [3, 2, 1]
+            [1, 2, 3],
+            [1, 3, 2],
+            [2, 1, 3],
+            [2, 3, 1],
+            [3, 1, 2],
+            [3, 2, 1],
         ],
     },
 ]

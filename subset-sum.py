@@ -13,26 +13,14 @@ class SolutionBrute:
         if i == n:
             ans.append(rsum)
             return ans
-        self.solve(arr, n, i+1, ans, rsum)
-        self.solve(arr, n, i+1, ans, rsum+arr[i])
+        self.solve(arr, n, i + 1, ans, rsum)
+        self.solve(arr, n, i + 1, ans, rsum + arr[i])
         return ans
 
 
 cases = [
-    {
-        "input": {
-            "arr": [2, 3],
-            "n": 2,
-        },
-        "expected": [0, 2, 3, 5],
-    },
-    {
-        "input": {
-            "arr": [1, 2, 1],
-            "n": 3,
-        },
-        "expected": [0, 1, 1, 2, 2, 3, 3, 4],
-    },
+    {"input": {"arr": [2, 3], "n": 2}, "expected": [0, 2, 3, 5]},
+    {"input": {"arr": [1, 2, 1], "n": 3}, "expected": [0, 1, 1, 2, 2, 3, 3, 4]},
 ]
 
 if __name__ == "__main__":

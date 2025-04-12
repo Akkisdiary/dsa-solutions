@@ -9,7 +9,7 @@ class SolutionBrute:
         ans = []
         board = []
         for _ in range(n):
-            board.append([0]*n)
+            board.append([0] * n)
 
         def renderAns():
             b = []
@@ -55,6 +55,7 @@ class SolutionBrute:
                     board[row][col] = 1
                     solve(row + 1)
                     board[row][col] = 0
+
         solve(0)
         return ans
 

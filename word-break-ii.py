@@ -18,8 +18,8 @@ class SolutionBrute:
                 ans.append(" ".join(sentence[:]))
                 return
             for end in range(start, len(s)):
-                if s[start:end + 1] in dictionary:
-                    sentence.append(s[start:end+1])
+                if s[start : end + 1] in dictionary:
+                    sentence.append(s[start : end + 1])
                     solve(end + 1)
                     sentence.pop(-1)
 
@@ -43,7 +43,7 @@ cases = [
     {
         "input": {
             "s": "godisnowhere",
-            "dictionary": {"god", "is", "no", "here"}
+            "dictionary": {"god", "is", "no", "here"},
         },
         "expected": [],
     },

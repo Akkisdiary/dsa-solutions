@@ -37,10 +37,7 @@ cases = [
         "expected": ListNode.as_linked_list([2, 2, 2]),
     },
     {
-        "input": {
-            "nums": [5],
-            "head": ListNode.as_linked_list([1, 2, 3, 4]),
-        },
+        "input": {"nums": [5], "head": ListNode.as_linked_list([1, 2, 3, 4])},
         "expected": ListNode.as_linked_list([1, 2, 3, 4]),
     },
     {
@@ -61,6 +58,5 @@ cases = [
 
 if __name__ == "__main__":
     TestRunner(Solution().modifiedList).test(
-        cases,
-        lambda x: list(sorted(x.as_list())) if x else x
+        cases, lambda x: list(sorted(x.as_list())) if x else x
     )

@@ -2,6 +2,7 @@
 # https://www.codingninjas.com/codestudio/problems/1112655
 # https://www.geeksforgeeks.org/problems/flattening-a-linked-list/1
 
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -91,7 +92,7 @@ l41.next = l51
 
 
 def printList(node):
-    while (node is not None):
+    while node is not None:
         print(node.data, end=" ")
         node = node.bottom
 
@@ -100,7 +101,7 @@ def printList(node):
 
 if __name__ == "__main__":
     t = int(input())
-    while (t > 0):
+    while t > 0:
         head = None
         arr = []
 

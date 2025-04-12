@@ -68,14 +68,8 @@ cases = [
     {"input": {"N": 5, "C": 3, "stalls": [1, 2, 8, 4, 9]}, "expected": 3},
     {"input": {"N": 6, "C": 4, "stalls": [0, 3, 4, 7, 10, 9]}, "expected": 3},
     {"input": {"N": 5, "C": 2, "stalls": [4, 2, 1, 3, 6]}, "expected": 5},
-    {
-        "input": {"N": 3, "C": 3, "stalls": [1, 2, 3]},
-        "expected": 1,
-    },
-    {
-        "input": {"N": 2, "C": 3, "stalls": [1, 2]},
-        "expected": -1,
-    },
+    {"input": {"N": 3, "C": 3, "stalls": [1, 2, 3]}, "expected": 1},
+    {"input": {"N": 2, "C": 3, "stalls": [1, 2]}, "expected": -1},
 ]
 
 if __name__ == "__main__":

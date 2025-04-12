@@ -23,6 +23,7 @@ class SolutionRecursion:
                 ans.append(parents)
             if children:
                 solve(children)
+
         solve([root])
         return ans
 

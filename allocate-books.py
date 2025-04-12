@@ -22,7 +22,7 @@ class SolutionBrute:
                 partitions.append(part[:])
                 return
             for i in range(start, len(A)):
-                part.append(A[start:i+1])
+                part.append(A[start : i + 1])
                 solve(i + 1, students - 1)
                 part.pop(-1)
 
@@ -61,7 +61,7 @@ class SolutionOptimal:
         students = 1
         for pages in books:
             if pages > limit:
-                return float('inf')
+                return float("inf")
             if cur_pages + pages <= limit:
                 cur_pages += pages
             else:
@@ -72,51 +72,43 @@ class SolutionOptimal:
 
 
 cases = [
+    {"input": {"A": [12, 12], "B": 2}, "expected": 12},
+    {"input": {"A": [10], "B": 1}, "expected": 10},
+    {"input": {"A": [10, 20, 1, 30], "B": 1}, "expected": 61},
+    {"input": {"A": [12, 34, 67, 90], "B": 2}, "expected": 113},
+    {"input": {"A": [5, 17, 100, 11], "B": 4}, "expected": 100},
+    {"input": {"A": [5], "B": 2}, "expected": -1},
     {
         "input": {
-            "A": [12, 12],
-            "B": 2,
-        },
-        "expected": 12,
-    },
-    {
-        "input": {
-            "A": [10],
-            "B": 1,
-        },
-        "expected": 10,
-    },
-    {
-        "input": {
-            "A": [10, 20, 1, 30],
-            "B": 1,
-        },
-        "expected": 61,
-    },
-    {
-        "input": {
-            "A": [12, 34, 67, 90],
-            "B": 2,
-        },
-        "expected": 113,
-    },
-    {
-        "input": {
-            "A": [5, 17, 100, 11],
-            "B": 4,
-        },
-        "expected": 100,
-    },
-    {
-        "input": {
-            "A": [5],
-            "B": 2,
-        },
-        "expected": -1,
-    },
-    {
-        "input": {
-            "A": [97, 26, 12, 67, 10, 33, 79, 49, 79, 21, 67, 72, 93, 36, 85, 45, 28, 91, 94, 57, 1, 53, 8, 44, 68, 90, 24],
+            "A": [
+                97,
+                26,
+                12,
+                67,
+                10,
+                33,
+                79,
+                49,
+                79,
+                21,
+                67,
+                72,
+                93,
+                36,
+                85,
+                45,
+                28,
+                91,
+                94,
+                57,
+                1,
+                53,
+                8,
+                44,
+                68,
+                90,
+                24,
+            ],
             "B": 26,
         },
         "expected": 97,

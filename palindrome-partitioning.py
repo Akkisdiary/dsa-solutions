@@ -15,7 +15,7 @@ class Solution:
                 return
             for i in range(index, len(s)):
                 if self.is_palindrome(s, index, i):
-                    part.append(s[index:i + 1])
+                    part.append(s[index : i + 1])
                     solve(i + 1)
                     part.pop(-1)
 
@@ -32,27 +32,11 @@ class Solution:
 
 
 cases = [
+    {"input": {"s": "aab"}, "expected": [["a", "a", "b"], ["aa", "b"]]},
+    {"input": {"s": "a"}, "expected": [["a"]]},
     {
-        "input": {
-            "s": "aab",
-        },
-        "expected": [["a", "a", "b"], ["aa", "b"]],
-    },
-    {
-        "input": {
-            "s": "a",
-        },
-        "expected": [["a"]],
-    },
-    {
-        "input": {
-            "s": "abcba",
-        },
-        "expected": [
-            ["a", "b", "c", "b", "a"],
-            ["a", "bcb", "a"],
-            ["abcba"],
-        ],
+        "input": {"s": "abcba"},
+        "expected": [["a", "b", "c", "b", "a"], ["a", "bcb", "a"], ["abcba"]],
     },
 ]
 

@@ -14,8 +14,8 @@ class Solution:
                 return
             if i < len(candidates):
                 if candidates[i] <= t:
-                    solve(i, t-candidates[i], subset + [candidates[i]])
-                solve(i+1, t, list(subset))
+                    solve(i, t - candidates[i], subset + [candidates[i]])
+                solve(i + 1, t, list(subset))
 
         solve(0, target, [])
         return ans
@@ -23,26 +23,14 @@ class Solution:
 
 cases = [
     {
-        "input": {
-            "candidates": [2, 3, 6, 7],
-            "target": 7,
-        },
+        "input": {"candidates": [2, 3, 6, 7], "target": 7},
         "expected": [[2, 2, 3], [7]],
     },
     {
-        "input": {
-            "candidates": [2, 3, 5],
-            "target": 8,
-        },
+        "input": {"candidates": [2, 3, 5], "target": 8},
         "expected": [[2, 2, 2, 2], [2, 3, 3], [3, 5]],
     },
-    {
-        "input": {
-            "candidates": [2],
-            "target": 1,
-        },
-        "expected": [],
-    },
+    {"input": {"candidates": [2], "target": 1}, "expected": []},
 ]
 
 if __name__ == "__main__":

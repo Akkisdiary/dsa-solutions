@@ -23,7 +23,11 @@ class SolutionBrute:
             for j in range(n):
                 if grid[i][j] == 2:
                     for di, dj in directions:
-                        if 0 <= i + di < m and 0 <= j + dj < n and grid[i + di][j + dj] == 1:
+                        if (
+                            0 <= i + di < m
+                            and 0 <= j + dj < n
+                            and grid[i + di][j + dj] == 1
+                        ):
                             grid[i + di][j + dj] = -1
         for i in range(m):
             for j in range(n):
@@ -46,7 +50,11 @@ class SolutionBrute:
                 if grid[i][j] != 1:
                     continue
                 for di, dj in directions:
-                    if 0 <= i + di < m and 0 <= j + dj < n and grid[i + di][j + dj] == 2:
+                    if (
+                        0 <= i + di < m
+                        and 0 <= j + dj < n
+                        and grid[i + di][j + dj] == 2
+                    ):
                         return True
         return False
 
@@ -67,9 +75,13 @@ class SolutionBetter:
             for _ in range(len(q)):
                 i, j = q.popleft()
                 for di, dj in directions:
-                    if 0 <= i + di < m and 0 <= j + dj < n and grid[i + di][j + dj] == 1:
-                        grid[i+di][j+dj] = 2
-                        q.append((i+di, j+dj))
+                    if (
+                        0 <= i + di < m
+                        and 0 <= j + dj < n
+                        and grid[i + di][j + dj] == 1
+                    ):
+                        grid[i + di][j + dj] = 2
+                        q.append((i + di, j + dj))
                         fresh -= 1
             time += 1
 
@@ -77,42 +89,10 @@ class SolutionBetter:
 
 
 cases = [
-    {
-        "input": {
-            "grid": [
-                [2, 1, 1],
-                [1, 1, 0],
-                [0, 1, 1]
-            ],
-        },
-        "expected": 4,
-    },
-    {
-        "input": {
-            "grid": [
-                [0, 2]
-            ],
-        },
-        "expected": 0,
-    },
-    {
-        "input": {
-            "grid": [
-                [0, 2, 0],
-                [0, 0, 0],
-                [1, 1, 1]
-            ],
-        },
-        "expected": -1,
-    },
-    {
-        "input": {
-            "grid": [
-                [0],
-            ],
-        },
-        "expected": 0,
-    },
+    {"input": {"grid": [[2, 1, 1], [1, 1, 0], [0, 1, 1]]}, "expected": 4},
+    {"input": {"grid": [[0, 2]]}, "expected": 0},
+    {"input": {"grid": [[0, 2, 0], [0, 0, 0], [1, 1, 1]]}, "expected": -1},
+    {"input": {"grid": [[0]]}, "expected": 0},
 ]
 
 if __name__ == "__main__":

@@ -22,7 +22,10 @@ class MinHeap:
         while i > 0:
             parent = (i - 1) // 2
             if self.heap[i] < self.heap[parent]:
-                self.heap[i], self.heap[parent] = self.heap[parent], self.heap[i]
+                self.heap[i], self.heap[parent] = (
+                    self.heap[parent],
+                    self.heap[i],
+                )
             i = parent
 
     def pop(self):
@@ -47,7 +50,10 @@ class MinHeap:
                     child = right
 
                 if child >= 0 and self.heap[i] > self.heap[child]:
-                    self.heap[i], self.heap[child] = self.heap[child], self.heap[i]
+                    self.heap[i], self.heap[child] = (
+                        self.heap[child],
+                        self.heap[i],
+                    )
                     i = child
                 else:
                     break
@@ -67,26 +73,24 @@ class Solution:
 
 
 cases = [
-    {
-        "input": {
-            "N": 3,
-            "Q": [[0, 2], [0, 1], [1]],
-        },
-        "expected": [1]
-    },
-    {
-        "input": {
-            "N": 2,
-            "Q": [[0, 1], [1]],
-        },
-        "expected": [1],
-    },
+    {"input": {"N": 3, "Q": [[0, 2], [0, 1], [1]]}, "expected": [1]},
+    {"input": {"N": 2, "Q": [[0, 1], [1]]}, "expected": [1]},
     {
         "input": {
             "N": 6,
             "Q": [
-                [0, 1], [0, 4], [0, 3], [0, 0], [0, 3], [0, 1],
-                [1], [1], [1], [1], [1], [1],
+                [0, 1],
+                [0, 4],
+                [0, 3],
+                [0, 0],
+                [0, 3],
+                [0, 1],
+                [1],
+                [1],
+                [1],
+                [1],
+                [1],
+                [1],
             ],
         },
         "expected": [0, 1, 1, 3, 3, 4],
@@ -95,20 +99,22 @@ cases = [
         "input": {
             "N": 10,
             "Q": [
-                [0, 32], [1,], [0, 30], [0, 48], [0, 13],
-                [1,], [0, 10], [1,], [0, 8], [0, 38],
+                [0, 32],
+                [1],
+                [0, 30],
+                [0, 48],
+                [0, 13],
+                [1],
+                [0, 10],
+                [1],
+                [0, 8],
+                [0, 38],
             ],
         },
         "expected": [32, 13, 10],
     },
     {
-        "input": {
-            "N": 4,
-            "Q": [
-                [0, 14], [1,],
-                [0, 27], [0, 39],
-            ],
-        },
+        "input": {"N": 4, "Q": [[0, 14], [1], [0, 27], [0, 39]]},
         "expected": [14],
     },
 ]
