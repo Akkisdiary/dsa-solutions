@@ -9,7 +9,7 @@ class Solution:
     # time: O(n log n) ; space: O(n)
     def countLargestGroup(self, n: int) -> int:
         groups = defaultdict(list)
-        for i in range(1, n+1):
+        for i in range(1, n + 1):
             s = sum(map(int, str(i)))
             groups[s].append(i)
         l = max(map(len, groups.values()))
@@ -21,14 +21,8 @@ class Solution:
 
 
 cases = [
-    {
-        "input": {"n": 13},
-        "expected": 4,
-    },
-    {
-        "input": {"n": 2},
-        "expected": 2,
-    }
+    {"input": {"n": 13}, "expected": 4},
+    {"input": {"n": 2}, "expected": 2},
 ]
 
 if __name__ == "__main__":
