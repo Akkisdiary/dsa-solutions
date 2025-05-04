@@ -30,27 +30,18 @@ class SolutionBetter:
                 memo[(d[1], d[0])] += 1
         ans = 0
         for v in memo.values():
-            ans += ((v-1) * v) // 2
+            ans += ((v - 1) * v) // 2
         return ans
 
 
 cases = [
+    {"input": {"dominoes": [[1, 2], [2, 1], [3, 4], [5, 6]]}, "expected": 1},
     {
-        "input": {
-            "dominoes": [[1,2],[2,1],[3,4],[5,6]],
-        },
-        "expected": 1,
-    },
-    {
-        "input": {
-            "dominoes": [[1,2],[1,2],[1,1],[1,2],[2,2]],
-        },
+        "input": {"dominoes": [[1, 2], [1, 2], [1, 1], [1, 2], [2, 2]]},
         "expected": 3,
     },
     {
-        "input": {
-            "dominoes": [[1,2],[1,2],[1,2],[1,2],[2,2]],
-        },
+        "input": {"dominoes": [[1, 2], [1, 2], [1, 2], [1, 2], [2, 2]]},
         "expected": 6,
     },
 ]
