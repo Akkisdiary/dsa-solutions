@@ -24,14 +24,8 @@ class SolutionBrute:
 
 
 cases = [
-    {
-        "input": {"strs": ["flower", "flow", "flight"]},
-        "expected": "fl",
-    },
-    {
-        "input": {"strs": ["dog", "racecar", "car"]},
-        "expected": "",
-    },
+    {"input": {"strs": ["flower", "flow", "flight"]}, "expected": "fl"},
+    {"input": {"strs": ["dog", "racecar", "car"]}, "expected": ""},
     {"input": {"strs": ["reflower", "flow", "flight"]}, "expected": ""},
 ]
 
