@@ -5,6 +5,7 @@ from typing import List
 from utils import TestRunner
 from collections import defaultdict
 
+
 class SolutionBrute:
     def minimumDistance(self, nums: List[int]) -> int:
         n = len(nums)
