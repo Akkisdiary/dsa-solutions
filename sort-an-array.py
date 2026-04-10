@@ -31,7 +31,7 @@ class SolutionMerge:
         return self.merge(start, mid, end, nums)
 
     def merge(self, start: int, mid: int, end: int, nums) -> List[int]:
-        left, right = nums[start:mid + 1], nums[mid + 1:end + 1]
+        left, right = nums[start : mid + 1], nums[mid + 1 : end + 1]
         i, j, k = start, 0, 0
         while j < len(left) and k < len(right):
             if left[j] < right[k]:
