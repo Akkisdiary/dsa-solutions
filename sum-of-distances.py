@@ -16,7 +16,7 @@ class SolutionBrute:
         for i in range(n):
             for j in range(n):
                 if i != j and nums[i] == nums[j]:
-                    arr[i] += abs(i-j)
+                    arr[i] += abs(i - j)
         return arr
 
 
@@ -30,13 +30,13 @@ class SolutionBetter:
         for i in range(n):
             for j in memo[nums[i]]:
                 if i != j:
-                    arr[i] += abs(i-j)
+                    arr[i] += abs(i - j)
         return arr
 
 
 cases = [
-    {"input": {"nums": [1,3,1,1,2]}, "expected": [5,0,3,4,0]},
-    {"input": {"nums": [0,5,3]}, "expected": [0,0,0]},
+    {"input": {"nums": [1, 3, 1, 1, 2]}, "expected": [5, 0, 3, 4, 0]},
+    {"input": {"nums": [0, 5, 3]}, "expected": [0, 0, 0]},
 ]
 
 if __name__ == "__main__":
